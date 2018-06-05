@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.30"
+        classpath "io.qameta.allure:allure-gradle:2.5"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'io.qameta.allure'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.30"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.2.30"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "com.codeborne:selenide:4.10.01"
+    compile "com.squareup.retrofit2:retrofit:2.4.0"
+    compile "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    compile "com.squareup.retrofit2:converter-gson:2.4.0"
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    testCompile "com.codeborne:selenide:4.10.01"
+    testCompile "org.seleniumhq.selenium:selenium-safari-driver:3.8.1"
+    testCompile "org.seleniumhq.selenium:selenium-chrome-driver:3.10.0"
+    testRuntime "org.apache.logging.log4j:log4j-jul:2.10.0"
+    testCompile "org.jetbrains.spek:spek-api:1.1.5"
+    testRuntime "org.jetbrains.spek:spek-junit-platform-engine:1.1.5"
+    testCompile "io.qameta.allure:allure-junit4:2.6.0"
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+allure {
+    version = '2.4.1'
+    autoconfigure = true
+    aspectjweaver = true
+    allureJavaVersion = '2.6.0'
+}
