@@ -2,8 +2,7 @@ package constants
 
 //const val DEV_URL = "http://54.165.219.136/" //dev
 //const val TEST_URL = "http://54.146.35.74/" //test
-const val TEST_URL = "https://vdrp-eu.softteco.com/"
-const val SALES_URL = "https://ridewithvia--via.cs25.my.salesforce.com/"
+const val TEST_URL = "https://www.facebook.com/"
 
 const val VIA_VAN_HOME_URL = "https://www.viavan.com/"
 const val PRIVACY_POLICY_URL = "https://www.viavan.com/privacy-policy/"

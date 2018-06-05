@@ -18,13 +18,11 @@ open class BaseMainPageUi: BaseUiTest() {
         @BeforeClass
         @JvmStatic fun setUp() {
             Selenide.open(Configuration.baseUrl)
-            baseTest.switchToCity(AMS)
         }
 
         @AfterClass
         @JvmStatic fun teardown() {
             Selenide.close()
-            ChromeDriver().quit()
         }
     }
 

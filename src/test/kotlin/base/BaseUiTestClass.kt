@@ -14,9 +14,5 @@ open class BaseUiTestClass: BaseTest() {
         init {
             initTestConfiguration()
         }
-
-        @BeforeClass @JvmStatic fun setup() {
-            open(Configuration.baseUrl)
-        }
     }
 }
